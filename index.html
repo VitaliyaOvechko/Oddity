@@ -4,12 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
     <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
-    <h1>Google</h1>
-    <input type="text" id="name-input" placeholder="Please enter your name" />
-    <h1 class="name">Hello, <span id="name-output">Anonymous</span>!</h1>
+    <header class="header">
+      <nav class="navigation">
+        <p>Gmail</p>
+        <p>Зображення</p>
+        <svg width="30" height="30">
+          <use href="./sprite.svg#icon-dots-grid"></use>
+        </svg>
+        <button class="login-btn">Увійти</button>
+      </nav>
+    </header>
+    <main class="container">
+      <h1 class="logo">
+        <span style="color: #4285f4">G</span>
+        <span style="color: #ea4335">о</span>
+        <span style="color: #fbbc05">o</span>
+        <span style="color: #4285f4">g</span>
+        <span style="color: #34a853">l</span>
+        <span style="color: #ea4335">e</span>
+      </h1>
+      <div class="search-wrap">
+        <svg class="search-icon" width="20" height="20">
+          <use href="./sprite.svg#icon-search"></use>
+        </svg>
+        <input class="search" type="text" id="input" />
+        <div class="icons-wrap">
+          <svg style="fill: #797a7c" width="20" height="20">
+            <use href="./sprite.svg#icon-keyboard"></use>
+          </svg>
+          <svg width="20" height="20">
+            <defs>
+              <linearGradient id="micGradient" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="60%" stop-color="#4285f4" />
+                <stop offset="20%" stop-color="#ea4335" />
+                <stop offset="100%" stop-color="#fbbc05" />
+              </linearGradient>
+            </defs>
+            <use
+              href="./sprite.svg#icon-mic"
+              style="fill: url(#micGradient)"
+            ></use>
+          </svg>
+          <svg width="20" height="20">
+            <defs>
+              <linearGradient id="cameraGradient" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="30%" stop-color="#4285f4" />
+                <stop offset="50%" stop-color="#fbbc05" />
+                <stop offset="0%" stop-color="#ea4335" />
+                <stop offset="100%" stop-color="#34a853" />
+              </linearGradient>
+            </defs>
+            <use
+              href="./sprite.svg#icon-camera"
+              style="fill: url(#cameraGradient)"
+            ></use>
+          </svg>
+        </div>
+      </div>
+      <div>
+        <button class="search-btn">Пошук Google</button>
+        <button class="search-btn" id="change-logo">Мені пощастить</button>
+      </div>
+      <div>
+        <p>Мова Google: <span class="language">English</span></p>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer-location">Україна</p>
+      <div class="footer-links">
+        <ul class="links-list">
+          <li>Про Google</li>
+          <li>Реклама</li>
+          <li>Для бізнесу</li>
+          <li>Як працює Пошук</li>
+        </ul>
+        <ul class="links-list">
+          <li>Конфіденційність</li>
+          <li>Умови</li>
+          <li>Налаштування</li>
+        </ul>
+      </div>
+    </footer>
   </body>
   <script src="./index.js" type="module"></script>
 </html>

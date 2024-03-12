@@ -1,11 +1,15 @@
-const input = document.querySelector("#name-input");
-const nameInput = document.querySelector("#name-output");
+const changeLogoBtn = document.querySelector("#change-logo");
+const logo = document.querySelector(".logo");
 
-input.addEventListener("input", onInputChange);
+changeLogoBtn.addEventListener("click", onLogoChange);
 
-function onInputChange(event) {
-  console.log(event.currentTarget.value);
-  event.currentTarget.value === ""
-    ? (nameInput.textContent = "Anonymous")
-    : (nameInput.textContent = event.currentTarget.value);
+function onLogoChange() {
+  logo.innerHTML = `
+        <span style="color: #4285f4">O</span>
+        <span style="color: #ea4335">d</span>
+        <span style="color: #fbbc05">d</span>
+        <span style="color: #4285f4">i</span>
+        <span style="color: #34a853">t</span>
+        <span style="color: #ea4335">y</span>
+    `;
 }
